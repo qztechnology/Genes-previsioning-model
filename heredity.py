@@ -139,9 +139,9 @@ def joint_probability(people, one_gene, two_genes, have_trait):
         * everyone in set `have_trait` has the trait, and
         * everyone not in set` have_trait` does not have the trait.
     """
-    PARENT_PROBS = [PROBS["mutation"], 0.5, 1 - PROBS["mutation"]] # PARENT_PROBS[n. Genes to Child]
+    PARENT_PROBS = [0.0 + PROBS["mutation"], 0.5, 1.0 - PROBS["mutation"]] # PARENT_PROBS[n. Genes to Child]
     
-    jp = 0
+    jp = 1
 
     for person in people:
         p_genes = 0
@@ -165,23 +165,27 @@ def joint_probability(people, one_gene, two_genes, have_trait):
         
             # Child - 1 Gene
             if person in one_gene:
-                if (father in two_genes and mother_zero_genes) or (mother in two_genes and father_zero_genes):
+                if (father in two_genes and mother in two_genes):
+                    p_genes = PARENT_PROBS[2] * PARENT_PROBS[0] + PARENT_PROBS[2] * PARENT_PROBS[0]
+                elif (father in two_genes and mother_zero_genes) or (mother in two_genes and father_zero_genes):
                     p_genes = PARENT_PROBS[2] * PARENT_PROBS[2] + PARENT_PROBS[0] * PARENT_PROBS[0]
                 elif (father in two_genes and mother in one_gene) or (mother in two_genes and father in one_gene):
                     p_genes = PARENT_PROBS[2] * PARENT_PROBS[1] + PARENT_PROBS[1] * PARENT_PROBS[0]
                 elif (father in one_gene and mother_zero_genes) or (mother in one_gene and father_zero_genes):
                     p_genes = PARENT_PROBS[1] * PARENT_PROBS[2] + PARENT_PROBS[1] * PARENT_PROBS[0]
                 elif (father_zero_genes and mother_zero_genes):
-                    p_genes = PARENT_PROBS[0] * PARENT_PROBS[0]
+                    p_genes = PARENT_PROBS[0] * PARENT_PROBS[2] + PARENT_PROBS[0] * PARENT_PROBS[2]
                 
                 if person in have_trait:
                     p_trait = PROBS["trait"][1][True]
                 else:
-                    p_trait = PROBS["trait"][1][False]                   
+                    p_trait = PROBS["trait"][1][False]
             
             # Child - 2 Genes
             elif person in two_genes:
-                if (father in two_genes and mother_zero_genes) or (mother in two_genes and father_zero_genes):
+                if (father in two_genes and mother in two_genes):
+                    p_genes = PARENT_PROBS[2] * PARENT_PROBS[2]
+                elif (father in two_genes and mother_zero_genes) or (mother in two_genes and father_zero_genes):
                     p_genes = PARENT_PROBS[2] * PARENT_PROBS[0] + PARENT_PROBS[2] * PARENT_PROBS[0]
                 elif (father in two_genes and mother in one_gene) or (mother in two_genes and father in one_gene):
                     p_genes = PARENT_PROBS[2] * PARENT_PROBS[1] + PARENT_PROBS[2] * PARENT_PROBS[1]
@@ -197,14 +201,16 @@ def joint_probability(people, one_gene, two_genes, have_trait):
 
             # Child - 0 Genes
             else: 
-                if (father in two_genes and mother_zero_genes) or (mother in two_genes and father_zero_genes):
+                if (father in two_genes and mother in two_genes):
                     p_genes = PARENT_PROBS[0] * PARENT_PROBS[0] + PARENT_PROBS[0] * PARENT_PROBS[0]
+                elif (father in two_genes and mother_zero_genes) or (mother in two_genes and father_zero_genes):
+                    p_genes = PARENT_PROBS[0] * PARENT_PROBS[2] + PARENT_PROBS[0] * PARENT_PROBS[0]
                 elif (father in two_genes and mother in one_gene) or (mother in two_genes and father in one_gene):
                     p_genes = PARENT_PROBS[0] * PARENT_PROBS[1] + PARENT_PROBS[0] * PARENT_PROBS[1]
                 elif (father in one_gene and mother_zero_genes) or (mother in one_gene and father_zero_genes):
-                    p_genes = PARENT_PROBS[1] * PARENT_PROBS[0] + PARENT_PROBS[1] * PARENT_PROBS[0]
+                    p_genes = PARENT_PROBS[1] * PARENT_PROBS[2] + PARENT_PROBS[1] * PARENT_PROBS[0]
                 elif (father_zero_genes and mother_zero_genes):
-                    p_genes = PARENT_PROBS[0] * PARENT_PROBS[0]
+                    p_genes = PARENT_PROBS[2] * PARENT_PROBS[2]
                     
                 if person in have_trait:
                     p_trait = PROBS["trait"][0][True]
@@ -212,7 +218,7 @@ def joint_probability(people, one_gene, two_genes, have_trait):
                     p_trait = PROBS["trait"][0][False]
 
         
-        jp += p_genes * p_trait
+        jp *= p_genes * p_trait
         
         print(f'jp: {jp}')
         
