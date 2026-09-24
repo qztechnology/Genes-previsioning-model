@@ -1,0 +1,97 @@
+<mxfile host="Electron">
+  <diagram name="Pagina-1" id="fRGeWVtU5XrqLrl9cLAC">
+    <mxGraphModel dx="933" dy="610" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="jqJVuEBhkjd1JoyleBBQ-16" edge="1" parent="1" source="jqJVuEBhkjd1JoyleBBQ-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="jqJVuEBhkjd1JoyleBBQ-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jqJVuEBhkjd1JoyleBBQ-18" edge="1" parent="1" source="jqJVuEBhkjd1JoyleBBQ-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="jqJVuEBhkjd1JoyleBBQ-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jqJVuEBhkjd1JoyleBBQ-2" parent="1" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=16;" value="" vertex="1">
+          <mxGeometry height="230" width="320" x="130" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="jqJVuEBhkjd1JoyleBBQ-3" parent="jqJVuEBhkjd1JoyleBBQ-2" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" value="" vertex="1">
+          <mxGeometry height="77" width="320" as="geometry" />
+        </mxCell>
+        <mxCell id="jqJVuEBhkjd1JoyleBBQ-4" parent="jqJVuEBhkjd1JoyleBBQ-3" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" value="C" vertex="1">
+          <mxGeometry height="77" width="107" as="geometry">
+            <mxRectangle height="77" width="107" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jqJVuEBhkjd1JoyleBBQ-5" parent="jqJVuEBhkjd1JoyleBBQ-3" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" value="F" vertex="1">
+          <mxGeometry height="77" width="106" x="107" as="geometry">
+            <mxRectangle height="77" width="106" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jqJVuEBhkjd1JoyleBBQ-6" parent="jqJVuEBhkjd1JoyleBBQ-3" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" value="M" vertex="1">
+          <mxGeometry height="77" width="107" x="213" as="geometry">
+            <mxRectangle height="77" width="107" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jqJVuEBhkjd1JoyleBBQ-7" parent="jqJVuEBhkjd1JoyleBBQ-2" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" value="" vertex="1">
+          <mxGeometry height="76" width="320" y="77" as="geometry" />
+        </mxCell>
+        <mxCell id="jqJVuEBhkjd1JoyleBBQ-8" parent="jqJVuEBhkjd1JoyleBBQ-7" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" value="1" vertex="1">
+          <mxGeometry height="76" width="107" as="geometry">
+            <mxRectangle height="76" width="107" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jqJVuEBhkjd1JoyleBBQ-9" parent="jqJVuEBhkjd1JoyleBBQ-7" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" value="2" vertex="1">
+          <mxGeometry height="76" width="106" x="107" as="geometry">
+            <mxRectangle height="76" width="106" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jqJVuEBhkjd1JoyleBBQ-10" parent="jqJVuEBhkjd1JoyleBBQ-7" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" value="2" vertex="1">
+          <mxGeometry height="76" width="107" x="213" as="geometry">
+            <mxRectangle height="76" width="107" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jqJVuEBhkjd1JoyleBBQ-11" parent="jqJVuEBhkjd1JoyleBBQ-2" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" value="" vertex="1">
+          <mxGeometry height="77" width="320" y="153" as="geometry" />
+        </mxCell>
+        <mxCell id="jqJVuEBhkjd1JoyleBBQ-12" parent="jqJVuEBhkjd1JoyleBBQ-11" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" value="" vertex="1">
+          <mxGeometry height="77" width="107" as="geometry">
+            <mxRectangle height="77" width="107" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jqJVuEBhkjd1JoyleBBQ-13" parent="jqJVuEBhkjd1JoyleBBQ-11" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" value="1 - 1" vertex="1">
+          <mxGeometry height="77" width="106" x="107" as="geometry">
+            <mxRectangle height="77" width="106" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jqJVuEBhkjd1JoyleBBQ-14" parent="jqJVuEBhkjd1JoyleBBQ-11" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" value="1 - 1" vertex="1">
+          <mxGeometry height="77" width="107" x="213" as="geometry">
+            <mxRectangle height="77" width="107" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jqJVuEBhkjd1JoyleBBQ-15" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="G: 1" vertex="1">
+          <mxGeometry height="60" width="120" x="160" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="jqJVuEBhkjd1JoyleBBQ-17" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="G: 1" vertex="1">
+          <mxGeometry height="60" width="120" x="300" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="jqJVuEBhkjd1JoyleBBQ-20" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="1" vertex="1">
+          <mxGeometry height="60" width="120" x="440" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="jqJVuEBhkjd1JoyleBBQ-23" edge="1" parent="1" source="jqJVuEBhkjd1JoyleBBQ-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="640" y="390" />
+              <mxPoint x="400" y="390" />
+            </Array>
+            <mxPoint x="400" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jqJVuEBhkjd1JoyleBBQ-21" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="1" vertex="1">
+          <mxGeometry height="60" width="120" x="580" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="jqJVuEBhkjd1JoyleBBQ-22" edge="1" parent="1" source="jqJVuEBhkjd1JoyleBBQ-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.844;entryY=0.995;entryDx=0;entryDy=0;entryPerimeter=0;" target="jqJVuEBhkjd1JoyleBBQ-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
