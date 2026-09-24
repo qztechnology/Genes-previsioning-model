@@ -239,26 +239,24 @@ def update(probabilities, one_gene, two_genes, have_trait, p):
         
         #print(f'probabilities: {probabilities}')
 
-        genes_counter = 0
+        n_genes = 0
 
         # Child - Genes
-        for n_gene in probabilities[person]["gene"]: 
-            if person in one_gene:
-                probabilities[person]["gene"][n_gene] = p
-                genes_counter = 1
-            elif person in two_genes:
-                probabilities[person]["gene"][n_gene] = p
-                genes_counter = 2
-            else: 
-                probabilities[person]["gene"][n_gene] = p
-                genes_counter = 0
+        if person in one_gene:
+            probabilities[person]["gene"][1] = p
+            n_genes = 1
+        elif person in two_genes:
+            probabilities[person]["gene"][2] = p
+            n_genes = 2
+        else: 
+            probabilities[person]["gene"][3] = p
+            n_genes = 0
             
-        
         # Child - Trait
         if person in have_trait:
-            probabilities[person]["trait"][True] = p
+            probabilities[person]["trait"][True] = PROBS["trait"][n_genes][True]
         else:
-            probabilities[person]["trait"][False] = p
+            probabilities[person]["trait"][False] = PROBS["trait"][n_genes][True]
 
 
 def normalize(probabilities):
