@@ -152,9 +152,7 @@ def joint_probability(people, one_gene, two_genes, have_trait):
         mother_zero_genes = False
         father_zero_genes = True if father not in one_gene and father not in two_genes else False
         mother_zero_genes = True if mother not in one_gene and mother not in two_genes else False
-            
-        #print(f'person: {person} - father: {father} - mother: {mother} - parent: {parent}')
-        
+
         # Parent - Genes and Trait
         if father == None and mother == None:
             genes = 1 if person in one_gene else 2 if person in two_genes else 0
@@ -217,10 +215,7 @@ def joint_probability(people, one_gene, two_genes, have_trait):
                 else:
                     p_trait = PROBS["trait"][0][False]
 
-        
         jp *= p_genes * p_trait
-        
-        print(f'jp: {jp}')
         
     return jp
         
@@ -232,32 +227,44 @@ def update(probabilities, one_gene, two_genes, have_trait, p):
     Which value for each distribution is updated depends on whether
     the person is in `have_gene` and `have_trait`, respectively.
     """
-    #print(f'probabilities: {probabilities} - one_gene: {one_gene} - two_genes: {two_genes} - have_trait: {have_trait} - p: {p}')
-    
-
     for person in probabilities:
-        
-        #print(f'probabilities: {probabilities}')
-
-        n_genes = 0
 
         # Child - Genes
+        # 1 Gene
         if person in one_gene:
-            probabilities[person]["gene"][1] = p
             n_genes = 1
+            if probabilities[person]["gene"][1] == 0:     
+                probabilities[person]["gene"][1] = p
+            else:
+                probabilities[person]["gene"][1] *= p      
+        # 2 Genes
         elif person in two_genes:
-            probabilities[person]["gene"][2] = p
             n_genes = 2
-        else: 
-            probabilities[person]["gene"][3] = p
+            if probabilities[person]["gene"][2] == 0:
+                probabilities[person]["gene"][2] = p
+            else:
+                probabilities[person]["gene"][2] *= p
+        # 0 Genes
+        else:
             n_genes = 0
+            if probabilities[person]["gene"][0] == 0:
+                probabilities[person]["gene"][0] = p
+            else:
+                probabilities[person]["gene"][0] *= p
             
         # Child - Trait
         if person in have_trait:
-            probabilities[person]["trait"][True] = PROBS["trait"][n_genes][True]
+            if probabilities[person]["trait"][True] == 0:
+                probabilities[person]["trait"][True] = PROBS["trait"][n_genes][True]
+            else:
+                probabilities[person]["trait"][True] *= PROBS["trait"][n_genes][True]
         else:
-            probabilities[person]["trait"][False] = PROBS["trait"][n_genes][True]
-
+            if probabilities[person]["trait"][False] == 0:
+                probabilities[person]["trait"][False] = PROBS["trait"][n_genes][False]
+            else:
+                probabilities[person]["trait"][False] *= PROBS["trait"][n_genes][False]
+    
+    print(f'probabilities: {probabilities}')
 
 def normalize(probabilities):
     """
